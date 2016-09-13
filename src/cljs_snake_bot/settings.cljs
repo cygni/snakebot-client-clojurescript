@@ -35,20 +35,25 @@
     :pretty-print-game-starting false
     :pretty-print-snake-died true
     :pretty-print-invalid-player-name true
+    :pretty-print-game-link true
     :pretty-print-player-registration true})
 
 (def default-map
-  {:width (:small map-sizes)
-   :height (:small map-sizes)
+  {
    :maxNoofPlayers 5
    :startSnakeLength 1
    :timeInMsPerTick 250
-   :obstaclesEnabled false
+   :obstaclesEnabled true
    :foodEnabled true
-   :edgeWrapsAround false
-   :headToTailConsumes false
+   :headToTailConsumes true
    :tailConsumeGrows false
    :addFoodLikelihood 15
    :removeFoodLikelihood 5
-   :addObstacleLikelihood 15
-   :removeObstacleLikelihood 15})
+   :spontaneousGrowthEveryNWorldTick 3
+   :trainingGame false
+   :pointsPerLength 1
+   :pointsPerFood 2
+   :pointsPerCausedDeath 5
+   :pointsPerNibble 10
+   :noofRoundsTailProtectedAfterNibble 3
+   })

@@ -103,6 +103,10 @@
     (println "\ngame tick: " (:gameTick msg))
     (print-pretty-map (:map msg))))
 
+(defn print-game-linke-message [msg]
+  (when (:pretty-print-game-link s/printer-settings)
+    (println "The game can be viewed at: " (:url msg))))
+
 (defn print [msg]
   (swap! messages conj msg))
 
@@ -123,6 +127,7 @@
             c/game-starting-message (print-game-starting-message msg)
             c/invalid-player-name-message (print-invalid-player-name-message msg)
             c/heart-beat-response (println "heart beat message received")
+            c/game-link-message (print-game-linke-message msg)
             c/invalid-message (println "Invalid message: " msg)
             "user" (println (:content msg)))))
       (if (or (s/state-get :socket-open)
