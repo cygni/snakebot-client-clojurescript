@@ -15,4 +15,5 @@
       c/snake-died-message (e/on-snake-died message)
       c/game-starting-message (e/on-game-starting message)
       c/invalid-player-name-message (e/on-invalid-player-name message)
+      c/game-link-message (e/on-game-link message)
       nil)))

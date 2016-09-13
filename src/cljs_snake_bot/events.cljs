@@ -30,3 +30,6 @@
 
 (defn on-invalid-player-name [msg]
   nil)
+
+(defn on-game-link [msg]
+ nil)

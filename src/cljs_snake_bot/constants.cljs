@@ -27,3 +27,5 @@
 (def heart-beat-response "se.cygni.snake.api.response.HeartBeatResponse")
 
 (def invalid-message "se.cygni.snake.api.exception.InvalidMessage")
+
+(def game-link-message "se.cygni.snake.api.event.GameLinkEvent")
