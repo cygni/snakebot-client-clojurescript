@@ -35,6 +35,7 @@
              {:id "test"
               :source-paths ["src" "test"]
               :compiler {
+                         :target :nodejs
                          :output-to "target/test/testmain.js"
                          :output-dir "target/test"
                          :main cljs-snake-bot.runner
