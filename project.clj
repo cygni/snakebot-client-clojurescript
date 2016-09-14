@@ -19,7 +19,8 @@
   :source-paths ["src"]
 
   :npm {:dependencies  [ws "1.0.1"
-                        colors "1.1.2"]}
+                        colors "1.1.2"
+                        karma "1.3.0"]}
 
   :clean-targets ["server.js"
                   "target"]
