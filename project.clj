@@ -20,7 +20,8 @@
 
   :npm {:dependencies  [ws "1.0.1"
                         colors "1.1.2"
-                        karma "1.3.0"]}
+                        karma "1.3.0"
+                        karma-cljs-test "0.1.0"]}
 
   :clean-targets ["server.js"
                   "target"]
