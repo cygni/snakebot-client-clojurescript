@@ -104,10 +104,9 @@ To print a user message just call the method print-user-message with all the tex
 There are a couple of tests written for this client. They can be found within the test folder.
 To run these tests do the following:
 
-1. Download and install SlimerJS. Follow the instructions at https://slimerjs.org/ and remember to set the script to your path
-2. in a terminal traverse to the project root
-3. lein deps
-4. lein doo slimer test
+1. in a terminal traverse to the project root
+2. lein deps
+3. lein doo node test
 
 One thing worth to note is that the unit test will not run with the help of line doo if there are prints within the code. So either, just use lein doo as a compiler and run the output file with node, or just comment out the lines that are printing when you are writing/running your tests.
 

@@ -19,7 +19,9 @@
   :source-paths ["src"]
 
   :npm {:dependencies  [ws "1.0.1"
-                        colors "1.1.2"]}
+                        colors "1.1.2"
+                        karma "1.3.0"
+                        karma-cljs-test "0.1.0"]}
 
   :clean-targets ["server.js"
                   "target"]
@@ -35,6 +37,7 @@
              {:id "test"
               :source-paths ["src" "test"]
               :compiler {
+                         :target :nodejs
                          :output-to "target/test/testmain.js"
                          :output-dir "target/test"
                          :main cljs-snake-bot.runner
