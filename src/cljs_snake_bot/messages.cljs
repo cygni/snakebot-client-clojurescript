@@ -6,19 +6,6 @@
 
 (def os (nodejs/require "os"))
 
-(defn get-ipv4 [addresses]
-  (:address (find-first #(= (:family %) "IPv4") addresses)))
-
-(defn get-ip []
-  (let [interfaces (js->clj (.networkInterfaces os) :keywordize-keys true)
-        eth0 (:eth0 interfaces)
-        wifi (:Wi-Fi interfaces)]
-    (if eth0 (get-ipv4 eth0)
-             (get-ipv4 wifi))))
-
-(defn get-os []
-  (str (.platform os) " - " (.release os)))
-
 (defn get-start-game-message []
   {:type c/start-game-message})
 
@@ -39,7 +26,8 @@
 
 (defn get-client-info-message []
   {:language "Clojurescript"
-   :operatingSystem (get-os)
-   :ipAddress (get-ip)
+   :languageVersion "1.7.170"
+   :operatingSystem (.platform os)
+   :operatingSystemVersion (.release os)
    :clientVersion s/client-version
    :type c/client-info-message})
