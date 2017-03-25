@@ -44,6 +44,8 @@ instead of "lein cljsbuild once" do "lein cljsbuild auto" this will start a file
 
 Update the settings of your client either if you want to change what the printer prints, the map used for the games, if you are the host for the game or not, or what hostname/port/gamemode the server is running.
 
+When running in arena mode the game mode needs to be changed to "arena" and the arena needs to be changed to a string representing the arena name
+
 You can also change what colors the snakes will be assigned to. All that you need to do is to change the snake-colors atom. Available options are; black, red, green, yellow, blue, magenta, cyan, white, gray and if the author of the colors.js package accepts my pull request you will also have; america, rainbow, random and zebra. Just remember that the color names are case sensitive.
 
 ### Events.cljs

@@ -10,9 +10,10 @@
 
 (def client-version "0.0.1")
 
-(def host-name "snake.cygni.se")
-(def host-port "80")
-(def game-mode "training")
+(def host-name "localhost")
+(def host-port "8080")
+(def game-mode "tournament")
+(def arena-name nil)
 
 (def map-sizes {:small 0 :medium 1 :large 2})
 
@@ -32,7 +33,7 @@
 (def printer-settings
    {:pretty-print-map-updated true
     :pretty-print-game-ended true
-    :pretty-print-game-starting false
+    :pretty-print-game-starting true
     :pretty-print-snake-died true
     :pretty-print-invalid-player-name true
     :pretty-print-game-link true

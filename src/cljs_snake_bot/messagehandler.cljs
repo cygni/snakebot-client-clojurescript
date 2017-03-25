@@ -16,4 +16,7 @@
       c/game-starting-message (e/on-game-starting message)
       c/invalid-player-name-message (e/on-invalid-player-name message)
       c/game-link-message (e/on-game-link message)
+      c/tournament-ended-message (e/on-tournament-ended message)
+      c/game-result-message (e/on-game-result message)
+      c/no-active-tournament-message (e/on-no-active-tournament message)
       nil)))

@@ -15,7 +15,6 @@
    :gameId gameId
    :gameTick tick})
 
-
 (defn get-player-registration-message [name]
   {:type c/register-player-message
    :playerName name

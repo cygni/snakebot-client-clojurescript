@@ -17,6 +17,7 @@
   (msgs/get-move-message (es/get-next-movement msg) (:gameId msg) (:gameTick msg)))
 
 (defn on-game-ended [msg]
+  (s/state-set :socket-open false)
   nil)
 
 (defn on-snake-died [msg]
@@ -32,4 +33,15 @@
   nil)
 
 (defn on-game-link [msg]
- nil)
+  nil)
+
+(defn on-game-result [msg]
+  nil)
+
+(defn on-tournament-ended [msg]
+  (s/state-set :socket-open false)
+  nil)
+
+(defn on-no-active-tournament [msg]
+  (s/state-set :socket-open false)
+  nil)
