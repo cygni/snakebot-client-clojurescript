@@ -10,9 +10,9 @@
 
 (def client-version "0.0.1")
 
-(def host-name "localhost")
-(def host-port "8080")
-(def game-mode "tournament")
+(def host-name "snake.cygni.se")
+(def host-port "80")
+(def game-mode "training")
 (def arena-name nil)
 
 (def map-sizes {:small 0 :medium 1 :large 2})
