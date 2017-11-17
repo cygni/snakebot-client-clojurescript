@@ -7,6 +7,7 @@
 
 (defn on-player-registered [msg]
   (s/state-set-many {:player-name (:name msg)
+                     :player-id (:receivingPlayerId msg)
                      :player-color (:color msg)})
   (if (= "training" s/game-mode)
       (msgs/get-start-game-message)
