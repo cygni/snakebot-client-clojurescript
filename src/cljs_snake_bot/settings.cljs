@@ -31,7 +31,7 @@
      (reset! game-state (merge @game-state value-map)))
 
 (def printer-settings
-   {:pretty-print-map-updated true
+   {:pretty-print-map-updated false
     :pretty-print-game-ended true
     :pretty-print-game-starting true
     :pretty-print-snake-died true
